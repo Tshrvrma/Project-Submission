@@ -19,7 +19,7 @@ const Card = () => {
 
   return (
     <div
-      className={`relative transform transition-border duration-300 flex flex-col  border rounded-lg ${
+      className={`w-full sm:w-1/2 lg:w-1/4 relative transform transition-border duration-300 flex flex-col  border rounded-lg ${
         isHovered ? 'border-pink-500 shadow-lg hover:scale-105' : 'border-gray-500'
       }`}
       onMouseEnter={handleMouseEnter}
@@ -50,7 +50,7 @@ const Card = () => {
       <div className={`absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4 transition-opacity duration-300 ${
         isHovered ? "opacity-100" : "opacity-0"
       }`}>
-        <p className="text-sm mt-5 mb-5">with over 7 million shots from a vast co munity of designers. Dribble is the leading source for design inspiration.</p>
+        <p className="text-sm mt-5 mb-5 text-center">with over 7 million shots from a vast co munity of designers. Dribble is the leading source for design inspiration.</p>
       </div>
       
       {/* Fourth Part: Radio Button */}
@@ -67,4 +67,5 @@ const Card = () => {
 };
 
 export default Card;
+
 

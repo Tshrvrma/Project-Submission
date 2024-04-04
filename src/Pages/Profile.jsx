@@ -12,11 +12,10 @@ export const Profile = () => {
   }
 
   function handleSubmit(event) {
-
     event.preventDefault();
     if (!file || !location) {
       alert("Please fill in all fields.");
-      return; 
+      return;
     }
     const formData = {
       location: location,
@@ -24,26 +23,26 @@ export const Profile = () => {
     };
 
     // Log data to console
-    console.log("Form Data:", formData); 
-    navigate("/position")
+    console.log("Form Data:", formData);
+    navigate("/position");
   }
 
   return (
-    <div className="bg-white w-[100vw] h-[100vh] p-5">
-      <div className="italic font-serif text-3xl text-pink-900 relative right-3">dribble</div>
-      <div className="w-[800px] bg-white mx-auto p-8">
-        <h1 className="font-bold text-4xl mb-4 italic">
+    <div className="bg-white w-full min-h-screen p-5 flex flex-col ">
+      <div className="italic font-serif text-3xl text-pink-900">dribble</div>
+      <div className="max-w-2xl w-full bg-white mx-auto p-8">
+        <h1 className="font-bold text-4xl mb-4 italic text-center">
           Welcome! Let's create your profile
-        </h1>  
-        <p className="mb-12 text-gray-500">
+        </h1>
+        <p className="mb-12 text-gray-500 text-center">
           Let others know you better! You can do these later
         </p>
         <h2 className="mb-6 font-bold">Add an avatar</h2>
-        <div className="flex flex-row-reverse items-center gap-x-2 relative right-24 w-[600px] mt-7">
-          <input type="file" onChange={handleChange}  />
-          <div className="relative">
+        <div className="flex flex-row-reverse flex-wrap-reverse justify-center items-center mb-8 ">
+          <input type="file" onChange={handleChange} />
+          <div className="relative mr-5 mb-2">
             {!file && (
-              <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+              <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center ">
                 <FiCamera size={24} />
               </div>
             )}
@@ -65,12 +64,14 @@ export const Profile = () => {
           />
         </div>
         <button
-          className="bg-pink-500 text-white font-normal mt-3 mb-2 w-[220px] h-10 border rounded-md "
+          className="bg-pink-500 text-white font-normal mt-3 mb-2 w-full sm:w-[220px] h-10 border rounded-md"
           onClick={handleSubmit}
         >
           Next
         </button>
-        <div className="text-gray-500 ml-10"><button onClick={() => navigate("/")}>  or press Return</button> </div>
+        <div className="text-gray-500 text-center mt-4">
+          <button onClick={() => navigate("/")}>or press Return</button>{" "}
+        </div>
       </div>
     </div>
   );

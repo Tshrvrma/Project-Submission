@@ -1,7 +1,5 @@
-// Position.js
-
 import React from 'react';
-import Card from './Card'; // Make sure the path to the Card component file is correct
+import Card from './Card'; 
 import { useNavigate } from "react-router-dom";
 
 export const Position = () => {
@@ -10,10 +8,10 @@ export const Position = () => {
   return (
     <div className='w-[100vw] h-[100vh] flex flex-col '>
       <div className="italic font-serif text-3xl text-pink-900 relative right-3 ml-10 mt-5 mb-5">dribble</div>
-        <div className='w-[60%] mx-auto  flex flex-col justify-center items-center'>
-            <h1 className='mb-5 font-bold text-2xl'> What brings you to Dribble?</h1>
-            <p className='text-gray-500'> select the options that best describe you. Don't worry,you can explore other option later.</p>
-            <div className='flex w-full justify-center items-center gap-5 mt-10'>
+        <div className='w-[70%] mx-auto  flex flex-col justify-center items-center'>
+            <h1 className='mb-5 font-bold text-2xl text-center'> What brings you to Dribble?</h1>
+            <p className='text-gray-500 text-center'> select the options that best describe you. Don't worry,you can explore other option later.</p>
+            <div className='flex  flex-wrap justify-center items-center  gap-5 mt-10 max-w-screen-lg mx-auto'>
                 <Card/>
                 <Card/>
                 <Card/>
